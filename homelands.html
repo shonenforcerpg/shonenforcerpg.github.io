@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <style>
+  p{
+  float: left;
+  margin-left: 10px
+}
+p{
+  float: right;
+  margin-right: 10px
+}
+table, th, td {
+    border: 1px solid white
+}
+</style>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shonen Force</title>
+	<meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
+	<meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- food icons -->
+	<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
+	<!-- demo styles -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- menu styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr-custom.js"></script>
+</head>
+
+<body>
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo">
+				<h2 class="dummy-heading">Shonen Force</h2>
+			</div>
+			<div class="bp-header__main">
+				<span class="bp-header__present"><h1>Races & Homelands</h1></span>
+				<h1 class="bp-header__title">Saiyans, Ninjas, Wizards, Shinigami & Quirk-Humans</h1>
+
+			</div>
+		</header>
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		<nav id="ml-menu" class="menu">
+			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="index.html">Home</a></li>
+					<li><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="howtoplay.html">How To Play</a></li>
+					<li><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="homelands.html">Races &amp; Homelands</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="skillsandweapons.html">Skills &amp; Weapons</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="modes.html">Modes</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="beasts.html">Beasts</a></li>
+					<lis><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-7" href="others.html">Others</a></li>
+				</ul>
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Skills &amp; Weapons">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Saiyan Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Ninja Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wizard Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quirk Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Shinigami Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Weapons</a></li>
+				</ul>
+				<!-- Submenu 5 -->
+				<ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Modes">
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Saiyan Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Ninja Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wizard Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quirk Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Shinigami Modes</a></li>
+					</ul>
+				<!-- Submenu 6 -->
+				<ul data-menu="submenu-6" id="submenu-6" class="menu__level" tabindex="-1" role="menu" aria-label="Modes">
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Saiyan Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Ninja Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wizard Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quirk Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Shinigami Beasts</a></li>
+					</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- /view -->
+	<script src="js/classie.js"></script>
+	<script src="js/dummydata.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				// breadcrumbsCtrl : true, // show breadcrumbs
+				// initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : false, // show back button
+				// itemsDelayInterval : 60, // delay between each menu item sliding animation
+				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
+
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
+
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+			closeMenuCtrl.focus();
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+			openMenuCtrl.focus();
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			gridWrapper.innerHTML = '';
+			classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+		}
+	})();
+    </script>
+<div class="bp-header__main">
+        <h2 class="bp-header__title">Races</h2>
+    <span class="bp-header__present"><h2>Saiyan</h2></span>
+
+
+</div>
+<p>
+    A saiyan has immense power which naturally boosts their basic attacks(basic attack is 3). The initial heath & cp of a saiyan are 15 & 10 respectively, this can be increased by ranking up. The max number of slots a Saiyan card can hold is 12. A saiyan has his/her own special move known as a Kekkai Genkai(KKG), they are as follows-
+</p>
+<p>
+   <b> KKG-Saiyan Blood:</b> This can only be activated when a saiyans health is 7 or below, when activated, all damages done to opponent is increased by 1, you can only use an attacking skill after this. You still pay the cp for the attack. 2cp to use.
+</p>
+<p>
+        <b> KKG-Beserk Blood:</b> When this is activated, its user is immune to every skill(including weapons, but not other KKGs or modes) which last for more than one turn. This effect lasts for 5 of opponent's end turns. 4cp to activate
+</p>
+<p>
+        <b> KKG-Saiyan god:</b> Gain 2cp for three of your end turns.
+</p>
+<p>
+        <b>  KKG-Saiyan Pride:</b> When your life reaches zero, gain 5hp, this skill auto-activates and can only occur when you are dead, you play next. 3cp to use
+</p>
+<p>
+        <b>KKG-Judgement:</b> you die, your opponent takes damage according to the last attack which killed you. 4cp to use.
+</p>
+<p>
+        <b>  KKG-Last Chance:</b> When Your health is 5 and  below, this allows you to bring back and use one of your used moves and its damage is multiplied by 1.5. If your opponent does not die by this, you lose. 2cp to use. 
+</p>
+<p>
+        <b>  KKG-Absorbtion:</b> When this is used, the damage you receive from an opponent in the last turn is added as health for you. 4cp to use.
+</p>
+<p>
+        <b> KKG-Master:</b> This allows you to use any other KKG in the field.
+</p>
+<div class="bp-header__main">
+        <span class="bp-header__present"><h2>Ninja</h2></span>
+    
+    </div>
+    <p>
+            A ninja has a broad system, they have a basic attack of 2. They have and initial health and cp of 10 & 15 respectively, these can be increased by ranking up. The max number of slots a ninja card can hold is 15. A ninja has his/her own special move known as a Kekkai Genkai(KKG), they are as follows- 
+
+    </p>
+    <p>
+            <b>  KKG-Jashin(Speed-Demon):</b> This is a move which allows its user to play, at most two, used(cannot duplicate) moves in one particular turn which will be counted as one single move. 2cp to use.
+    </p>
+    <p>
+            <b>KKG-Scarecrow:</b> This brings all used moves back except for this one. Opponent plays after this move is used, 3cp to use.
+    </p>
+    <p>
+            <b> KKG-Senju Blood Element:</b> This Enables its user to use one move of any other character in the field except summoning moves. The move must be used immediately. 2cp to use, you still use cp for the other move used.
+
+    </p>
+    <p>
+            <b> KKG-Copy:</b> User can use one of any opponent move, you can decide to use the move immediately or keep it for later(even if it has been used by opponent, it does not matter, as long as it is a move on the opponent's card. Summoning moves can be copied, but those must be used immediately) rules of the jutsu apply. If you try to copy a move opponent does not have, this skill is negated and opponent plays, 3cp to use
+    </p>
+    <p>
+            <b> KKG-Byakugan:</b> Blocks opponent last and next move ( i.e: Opponents last move would be blocked, then opponents plays another move which would also be blocked). Byakugan remains active till opponents next move is blocked(opponent can skip). 3cp to use.
+    </p>
+    <p>
+            <b> KKG-Sharingan:</b> You tell your opponent the next move he/she uses and he/she must do it accordingly. This skill makes opponent use skills against himself/herself only if you know the skill off heart. 3cp to use.
+    </p>
+    <p>
+           <b>KKG-Snatch:</b> This enables user to steal an opponents KKG until the health of the player whose KKG has been stolen is below 7. You can use this even if you are dead. KKG stolen can be used now or saved for later. 2cp to use.
+    </p>
+    <p>
+           <b> KKG-Jougan:</b> When your health is below 5, and you are about to take damage, pay half your health and opponent will take the damage instead of you, you play next. 3cp to use.
+    </p>
+    <p>
+            <b>KKG-Rinnengan:</b> Gain 2 used skills back and all your attacks do +1 damage, cannot be used until your health is 8 and below. 4cp to activate.
+    </p>
+    <div class="bp-header__main">
+            <span class="bp-header__present"><h2>Wizard</h2></span>
+        </div>
+        <p>
+                Wizards are wariors who use specific magic for battle. They have strong wills with many skills to back it up. A wizard's punch is 2 and kick is 3. They have an initial health & cp of 13 & 12 respectively. The max number of slots a wizard card can hold is 13. A wizard has his/her own special move known as a Kekkai Genkai(KKG), they are as follows-
+        </p>
+        <p>
+                <b>  KKG-Fake Skill:</b> This allows user to use a skill used before but you pay hp instead of cp for the additional skill.
+        </p>
+        <p>
+               <b> KKG-Tribute:</b> When you die your opponent loses life equal to the amount of cp you have left after removing the cp cost of this move. 3cp to use.
+        </p>
+        <p>
+                <b>  KKG-Dark Zero Grounds:</b> When your cp is lower than 4 gain 5cp, the floor of the field turns to a black hole which decreases all damage done to you by 1. This ends after 5 of your turns. 3cp to use.
+        </p>
+        <p>
+                <b>  KKG-Physical Attack Immunity:</b> All damage that involve puch, kick and weapons are cancelled, no matter what, lasts for 5 of opponent's end turns, after use, opponent plays next. 3cp to use.
+        </p>
+        <p>
+                <b>  KKG-High Magic Nullification:</b> All atk skills involving cp 4 and above are nullified, can be used once. After use, opponent plays next. 3cp to use.
+        </p>
+        <p>
+                <b>  KKG-Magic Block:</b> Opponent cannot play any skill which affects you in their next 2 turns. 3cp to use.
+
+        </p>
+        <p>
+                <b>  KKG-Exchange:</b> This allows you to take one of an opponent's move,(including modes) but not another KKG and replace it with one of your own(rules of the moves apply), this only works if you know the name of the skill you want to take from your opponent(moves must not be of the same type). 2cp to use.
+
+        </p>
+        <p>
+             <b>   KKG-Magic Conversion:</b> All damage you recieved in your last turn from one opponent is added as cp for you, can also be used in opponent's turn.
+        </p>
+        <div class="bp-header__main">
+                <span class="bp-header__present"><h2>Shinigami</h2></span>
+            </div>
+        <p>
+                A Shinigami is an extremely strong race with a high level of intelligence, they have a basic attack of 2. They have and initial health and cp of 13 & 15 respectively, these can be increased by ranking up. The max number of slots a shinigami card can hold is 14. A Shinigami has his/her own special move known as a Kekkai Genkai(KKG), they are as follows- 
+        </p>
+        <div class="bp-header__main">
+                <span class="bp-header__present"><h2>Quirk-Human</h2></span>
+            </div>
+    <p>
+            A quirk human is an advanced, high powered version of a human, they have a basic attack of 3. They have and initial health and cp of 14 & 12 respectively, these can be increased by ranking up. The max number of slots a quirk-human card can hold is 15.
+    </p>
+    <p>
+            Quirk-Humans have specials known as Kekkai Genkai (KKG) and are as follows:
+    </p>
+    <p>
+           <b> KKG-Quick Harden:</b> Instantly hardens user's body reducing damage recieved by 1, lasts for 6 turns after activation(not user turns), can be used in opponent's turn. 3cp to use.
+    </p>
+    <p>
+            <b>  KKG-Sticky Balls:</b> Opponent cannot damage you without using cp for 3 turns, an attack skill can be used after this. 2cp to use.
+    </p>
+    <p>
+            <b>  KKG-Ice Glacier: </b>User turns battlefield to ice, User's attacks are increased by one and damage recieved reduced by 1 because the intense cold weakens the opponent, lasts for 3 of user's end turns. 3cp to use.
+    </p>
+    <p>
+            <b>  KKG-Dupli Arm:</b> User is able to reuse used moves, lasts for 3 of opponent's end turns. 3cp to use.
+    </p>
+    <p>
+            <b> KKG-Electrification:</b> User is covered completely with electricity, this increases damage by 1 and user is unaffected by physical attacks, this lasts for 5 turrns. 4cp to use.
+    </p>
+    <p>
+            <b>  KKG-Create:</b> User can use 2 weapon skills belonging to anyone else in the battlefield, the skill is used immediately after activation of this KKG. 2cp to use, 3cp for 2nd use.
+    </p>
+    <p>
+            <b>  KKG-Foresight:</b> Opponent  must tell user next 3 skills to be used and must use them accordignly. 3cp to use.
+    </p>
+    <p>
+            <b> KKG-Heal:</b> Every end turn of the user, add 1hp to user's health, lasts for 5 of the users end turns. 4cp to use.
+    </p>
+    <div class="bp-header__main">
+            <h1 class="bp-header__title">Homelands</h1>
+        </div><br>
+        <img width="100%" height="100%" src="images\iwagaure.png"><br>
+        <div class="bp-header__main">
+                <span class="bp-header__present"><h2>Iwagakure</h2></span>
+            </div>
+            </p>
+            <img width="100%" height="100%" src="images\kirigakure.png"><br>
+            <div class="bp-header__main">
+                    <span class="bp-header__present"><h2>Kirigakure</h2></span>
+                </div>
+    <footer align="center"><p>&copy; Copyright 2020 Shonen Force, ØT Holdings - All Rights Reserved</p></footer>
+</body>
+
+</html>

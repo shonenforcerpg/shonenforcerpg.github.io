@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <style>
+  p{
+  float: left;
+  margin-left: 10px
+}
+p{
+  float: right;
+  margin-right: 10px
+}
+
+table, th, td {
+   text-align: center;
+}
+th {
+  background-color: #dddddd;
+  color: rgb(54, 54, 54);
+}
+
+    </style>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How To Play</title>
+	<meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
+	<meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- food icons -->
+	<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
+	<!-- demo styles -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- menu styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr-custom.js"></script>
+</head>
+
+<body>
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo">
+				<h2 class="dummy-heading">Shonen Force</h2>
+			</div>
+			<div class="bp-header__main">
+				<span class="bp-header__present"><h1>How To Play</h1></span>
+				<h1 class="bp-header__title">Learn how the game is played and how to improve and strategise</h1>
+
+			</div>
+		</header>
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		<nav id="ml-menu" class="menu">
+			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="index.html">Home</a></li>
+					<li><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="howtoplay.html">How To Play</a></li>
+					<li><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="homelands.html">Races &amp; Homelands</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="skillsandweapons.html">Skills &amp; Weapons</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="modes.html">Modes</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="beasts.html">Beasts</a></li>
+					<lis><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-7" href="others.html">Others</a></li>
+				</ul>
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Skills &amp; Weapons">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Saiyan Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Ninja Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wizard Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quirk Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Shinigami Skills</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Weapons</a></li>
+				</ul>
+				<!-- Submenu 5 -->
+				<ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Modes">
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Saiyan Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Ninja Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wizard Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quirk Modes</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Shinigami Modes</a></li>
+					</ul>
+				<!-- Submenu 6 -->
+				<ul data-menu="submenu-6" id="submenu-6" class="menu__level" tabindex="-1" role="menu" aria-label="Modes">
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Saiyan Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Ninja Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wizard Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quirk Beasts</a></li>
+						<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Shinigami Beasts</a></li>
+					</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- /view -->
+	<script src="js/classie.js"></script>
+	<script src="js/dummydata.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				// breadcrumbsCtrl : true, // show breadcrumbs
+				// initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : false, // show back button
+				// itemsDelayInterval : 60, // delay between each menu item sliding animation
+				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
+
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
+
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+			closeMenuCtrl.focus();
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+			openMenuCtrl.focus();
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			gridWrapper.innerHTML = '';
+			classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+		}
+	})();
+    </script>
+   <br> <p>
+            This is a role-play game, meaning you will have a character card which has a select number of moves/skills. A card is gotten from an admin.
+    </p>
+    <span class="bp-header__present"><h4 align="center">Terms:</h4></span>
+    <p>
+        <b> Card -</b> This holds your skills/moves. This is what you use in-battle. When you first join, you have a card that has 6 moves & 8 slots(a slot can be bought with 10xp, max number of slots is varies with race). Every player has a card, do not show other players your card(except from admins) so your moves will not be predictable.
+    </p>
+    <p>
+        <b>Skills/Moves/Justu - </b>These are what you use in battle. You use the moves given in your card to fight. Moves can also be bought using xp. There are special moves(KKG) which cannot be bought and cannot be changed when you are given in your card.
+    </p>
+    <p>
+      <b>  Battle -</b> This is a fight between players in the game, there are different types of battles, including one-on-one, two-on-two(tag team), friendly battle, death batlle, beast battle, tounament battle, etc. A battle is won when a player reduces his/her opponenets health to zero.
+    </p>
+    <p>
+        <b> Health(HP) -</b> This differs depending on your race(more about this in the Races & Villages section). This is an essential factor because if an opponent depletes this completely during a battle, that battle is lost.
+    </p>
+    <p>
+        <b>   Energy(CP) - </b>This is the amount of energy one has. This is needed to perform most moves, it also differs depending on your race. If your cp drops to zero during a battle, you can skip a turn and gain 2cp, but you lose 2hp in the process as well.
+    </p>
+    <p>
+       <b> XP -</b> This is the in-game monetary system, xp is gotten from win ning battles & can also be bought using real money(100 Naira for 5xp).  
+    </p>
+    <p>
+        <b>Crowns - </b>  These are needed to level up your character rank, crowns are gotten from winning battles. Increasing your rank increases the amount of health and chakra points you have at the start of a battle.
+    </p>
+    <h4 align="center"><b>Ranks are as Follows</h4>  
+<table align="center">
+    <tr>
+        <th>Rank</th>
+        <th>Crowns Required</th>
+        <th>Specials</th>
+    </tr>
+    <tr>
+        <td>Novice</td>
+        <td>0-199</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Amateur</td>
+        <td>200-399</td>
+        <td>+2hp</td>
+    </tr>
+    <tr>
+        <td>Skilled</td>
+        <td>400-799</td>
+        <td>+2cp</td>
+    </tr>
+    <tr>
+        <td>Ace</td>
+        <td>800-1299</td>
+        <td>+1hp</td>
+    </tr>
+    <tr>
+        <td>Expert</td>
+        <td>1300-1799</td>
+        <td>+1cp</td>
+    </tr>
+    <tr>
+        <td>Specialist</td>
+        <td>1800-2499</td>
+        <td>+2cp</td>
+    </tr>
+    <tr>
+        <td>Elite</td>
+        <td>2500-2999</td>
+        <td>+2hp</td>
+    </tr>
+    <tr>
+        <td>GrandMaster</td>
+        <td>3000-3999</td>
+        <td>+2cp</td>
+    </tr>
+    <tr>
+        <td>Atlas</td>
+        <td>4000-4999</td>
+        <td>+2hp</td>
+    </tr>
+    <tr>
+        <td>Overlord</td>
+        <td>5000-</td>
+        <td>+3hp&3cp</td>
+	</tr>
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+</table><br><br>
+<footer align="center"><p>&copy; Copyright 2020 Shonen Force, ØT Holdings - All Rights Reserved</p></footer>
+</body>
+
+</html>
