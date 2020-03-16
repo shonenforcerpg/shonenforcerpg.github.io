@@ -5,123 +5,50 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shonen Force</title>
+	<title>Home</title>
 	<meta name="description" content="Shonen Force RPG" />
 	<meta name="keywords" content="Shonen Force RPG" />
 	<meta name="author" content="Victory" />
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- food icons -->
-	<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
-	<!-- demo styles -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<!-- menu styles -->
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr-custom.js"></script>
 </head>
 
 <body>
-	<!-- Main container -->
-	<div class="container">
-		<!-- Blueprint header -->
-		<header class="bp-header cf">
-			<div class="dummy-logo">
-				<h2 class="dummy-heading">Shonen Force</h2>
-			</div>
-			<div class="bp-header__main">
-				<span class="bp-header__present"><h1>Welcome To The Shonen Force RPG Website</h1></span>
-				<h1 class="bp-header__title">On this website, you can learn how to play, different skills, races, modes, and more.</h1>
+	<!-- navigation -->
+	<nav class="pages-nav">
+		<div class="pages-nav__item"><a class="link link--page" href="#page-home"><b>Home</b></a></div>
+		<div class="pages-nav__item"><a href="howtoplay.html"> <b> HOW TO PLAY</b></a></div>
+		<div class="pages-nav__item"><a href="#page-manuals"><B>RACES &AMP; HOMELANDS</B></a></div>
+		<div class="pages-nav__item"><a href="#page-software"><B>SKILLS &AMP; WEAPONS</B></a></div>
+		<div class="pages-nav__item"><a href="#page-custom"><B> MODES</B></a></div>
+		<div class="pages-nav__item"><a href="#page-training"><B> BEASTS</B></a></div>
+		<div class="pages-nav__item"><a href="#page-training"><B> OTHERS</B></a></div>
+		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded">Shonen Force</a></div>
+		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded">+2348100715080</a></div>
+		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded">Find me on whatsapp</a></div>
+	</nav>
+	<!-- /navigation-->
+	<!-- pages stack -->
+	<div class="pages-stack">
+		<!-- page -->
+		<div class="page" id="page-home">
+			<!-- Blueprint header -->
+			<header class="bp-header cf">
+				<span class="bp-header__present">Welcome to the</span>
+				<h1 class="bp-header__title">Shonen Force RPG website</h1>
+				<p class="bp-header__desc">On this website, you can learn how to play, different skills, races, modes and more</p>
+			</header>
 
-			</div>
-		</header>
-		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
-		<nav id="ml-menu" class="menu">
-			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-			<div class="menu__wrap">
-				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
-					<li><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="index.html">Home</a></li>
-					<li><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="howtoplay.html">How To Play</a></li>
-					<li><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="homelands.html">Races &amp; Homelands</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Skills &amp; Weapons</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Modes</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="#">Beasts</a></li>
-					<lis><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-7" href="others.html">Others</a></li>
-				</ul>
-				<!-- Submenu 4 -->
-				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Skills &amp; Weapons">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="saiyanskills.html">Saiyan Skills</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="ninjaskills.html">Ninja Skills</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="wizardskills.html">Wizard Skills</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="quirkskills.html">Quirk Skills</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="shinigamiskills.html">Shinigami Skills</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="weapons.hmtl">Weapons</a></li>
-				</ul>
-				<!-- Submenu 5 -->
-				<ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Modes">
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="saiyanmodes.html">Saiyan Modes</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="ninjamodes.html">Ninja Modes</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="wizardmodes.html">Wizard Modes</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="quirkmodes.html">Quirk Modes</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="shinigamimodes.html">Shinigami Modes</a></li>
-					</ul>
-				<!-- Submenu 6 -->
-				<ul data-menu="submenu-6" id="submenu-6" class="menu__level" tabindex="-1" role="menu" aria-label="Modes">
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="saiyanbeasts.html">Saiyan Beasts</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="ninjabeasts.html">Ninja Beasts</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="wizardbeasts.html">Wizard Beasts</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="quirkbeasts.html">Quirk Beasts</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" href="shinigamibeasts.html">Shinigami Beasts</a></li>
-					</ul>
-			</div>
-		</nav>
+		</div>
+		<!-- /page -->
 	</div>
-	<!-- /view -->
+	<!-- /pages-stack -->
+	<button class="menu-button"><span>Menu</span></button>
 	<script src="js/classie.js"></script>
-	<script src="js/dummydata.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-	(function() {
-		var menuEl = document.getElementById('ml-menu'),
-			mlmenu = new MLMenu(menuEl, {
-				// breadcrumbsCtrl : true, // show breadcrumbs
-				// initialBreadcrumb : 'all', // initial breadcrumb text
-				backCtrl : false, // show back button
-				// itemsDelayInterval : 60, // delay between each menu item sliding animation
-				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-			});
-
-		// mobile menu toggle
-		var openMenuCtrl = document.querySelector('.action--open'),
-			closeMenuCtrl = document.querySelector('.action--close');
-
-		openMenuCtrl.addEventListener('click', openMenu);
-		closeMenuCtrl.addEventListener('click', closeMenu);
-
-		function openMenu() {
-			classie.add(menuEl, 'menu--open');
-			closeMenuCtrl.focus();
-		}
-
-		function closeMenu() {
-			classie.remove(menuEl, 'menu--open');
-			openMenuCtrl.focus();
-		}
-
-		// simulate grid content loading
-		var gridWrapper = document.querySelector('.content');
-
-		function loadDummyData(ev, itemName) {
-			ev.preventDefault();
-
-			closeMenu();
-			gridWrapper.innerHTML = '';
-			classie.add(gridWrapper, 'content--loading');
-			setTimeout(function() {
-				classie.remove(gridWrapper, 'content--loading');
-				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-			}, 700);
-		}
-	})();
-	</script>
 </body>
 
 </html>
