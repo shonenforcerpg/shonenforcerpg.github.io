@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shonen Force</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shonen Force RPG" />
+	<meta name="keywords" content="Shonen Force RPG" />
+    <meta name="author" content="Victory Fatoyinbo" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/menu.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="howtoplay.html">How to play</a></li>
+                        <li><a href="races.html">Races &amp; Homelands</a></li>
+                        <li><a href="skills.html">Skills &amp; Weapons</a></li>
+                        <li><a href="modes.html">Modes</a></li>
+                        <li><a href="beasts.html">Beasts</a></li>
+                        <li><a href="specialC.html">Special Characters</a></li>
+                        <li><a href="others.html">Others</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="showcase">
+        <div class="container showcase-inner"><br><br>
+            <h1><b>Skills &amp; Weapons</b></h1><br>
+            <p>All Saiyan, Ninja, Wizard, Quirk & Shinigami moves, as well as weapons</p><br>
+        </div>
+    </header>
+    <div class="normal">
+        <p>When you have gotten a character card, the actions of the skills(except KKGs) which are on your card can be found here. Skills on this page can also be bought using XPs. The XPs of skills are stated at the end of the move.</p><br>
+        <p><b>Types of Skills</b></p> <br>
+        <p>There are 6 different type of skills, the skill type is stated in a bracket after the name of the skill. The 6 types are as follows;</p><br>
+        <p>(nom): Normal Skill</p>
+        <p>(atk): Attacking Skill</p>
+        <p>(time): Time-Based Skill</p>
+        <p>(def): Defensive Skill</p>
+        <p>(neg): Neglecting Skill</p>
+        <p>(gain): Gain Skill</p><br>
+        <p><b>Note: </b>A card slot can only hold one skill, but when the slot holds a mode, it can contain 3 modes.</p><br>
+        <p>If a turn is skipped you lose 2hp but gain 2cp.</p><br>
+        <p>You can only use a particular skill once, unless it is stated in the description of the skill that it can be used more than once.</p><br>
+        <p>A skill can be wasted, which means, if the move is used in a wrong situation, the move is counted but will have no effect in the battle.</p><br>
+        <p>To use a skill against a player, just type the skill name.</p><br>
+        <p>A move can be sold for half the XPs it is worth.</p><br>
+        <h3>Saiyan Skills</h3><br>
+        <p><b>Punch </b>&amp; <b>Kick </b>are the first skills owned by a saiyan, These take 3hp, They cannot be sold and they require no cp to use.</p><br>
+
+        <div class="main-search">
+            <input id="searchbar" onkeyup="search_saiyan()" type="text" name="search" placeholder="Search Saiyan Skills...">
+            <ol id="list">
+                <br> <li class="saiyan"><b>All Clear(atk): </b>Give opponent 2 damage. This skill cannot be neglected. 0cp to use. 5xp to buy.</li><br>
+                <li class="saiyan"><b>Burning Slash(atk): </b>GIve opponent 4 damage. 2cp to use. 14xp to buy</li><br>
+                <li class="saiyan"><b>Arm Crash(neg): </b>If an opponent is trying to use a defensive skill, this skill destroys it and gives opponent damage according to the cp of the defensive skill used. 1cp to use. 8xp to buy.</li><br>
+                <li class="saiyan"><b>Charge(gain): </b>Increase your cp by 1 in your end turn and opponent's start turn until opponent gives you damage. 0cp to use. 15xp to buy.</li><br>
+                <li class="saiyan"><b>Super Charge(gain): </b>Increase your cp by 2 in your end turn and opponent's start turn until opponent gives you damage. 0cp to use. 20xp to buy.</li><br>
+                <li class="saiyan"><b>Fake Death(time): </b>Your health turns to 0 at this turn and remains at 0 until the start of your next turn and returns to its original point with an additional 3hp. 3cp to use. 13xp to buy.</li><br>
+                <li class="saiyan"><b>Burst(gain): </b>You gain an extra punch & kick. 4cp to use. 8xp to buy.</li><br>
+                <li class="saiyan"><b>Unlock Potential(gain): </b>All your attacks are increased by 1 for 4 of your end turns. 3cp to use. 15xp to buy.</li><br>
+                <li class="saiyan"><b>Kamehameha(atk): </b>Does 3 damage to opponent. 1cp to use. 10xp to buy.</li><br>
+                <li class="saiyan"><b>Full Powered Kamehameha(atk): </b>Does 5 damage to opponent. 3cp to use. 20xp to buy.</li><br>
+                <li class="saiyan"><b>Evil Ray Strike(time): </b>Your opponent takes 2 damage for 3 of their end turns. 4cp to use. 18xp to buy.</li><br>
+                <li class="saiyan"><b>Solar Flare(gain): </b>You can play 2 additional skills in your card after this is used. If attacking skills are used, damage cannot exceed 10. Can only be used if opponent gives you damage in their previous turn. 2cp to use. 20xp to buy.</li><br>
+                <li class="saiyan"><b>Ki Blast(atk/gain): </b>You can play 2 additional skills in your card after this is used. If attacking skills are used, damage cannot exceed 10. Can only be used if opponent gives you damage in their previous turn. 2cp to use. 20xp to buy.</li><br>
+                <li class="saiyan"></li><br>
+                <li class="saiyan"></li><br>
+                <li class="saiyan"></li><br>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+                <li class="saiyan"></li>
+            </ol>
+        </div>
+    </div><br>
+</body>
+</html>

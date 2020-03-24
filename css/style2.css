@@ -22,10 +22,10 @@ body {
     padding: 0.3rem; 
 }
 
-/*Main heading styling*/
 .showcase{
     background-color: var(--primary-color);
     color: white;
+    height: 100vh;
     position: relative;
 }
 
@@ -58,7 +58,6 @@ body {
     font-size: 1.3rem;
 }
 
-/*Content styling*/
 .normal {
     background-color: rgb(42, 43, 48);
     color: white;
@@ -97,7 +96,7 @@ body {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    border-radius: 15px 15px 0 0;
+    border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow:0 0 20px rgba(255, 255, 255, 0.25);
 }
@@ -114,29 +113,14 @@ body {
     padding: 12px 15px;
 }
 
+.content-table tbody tr{
+    border-bottom: 1px solid #4d4c4c;
+}
+
 .content-table tbody tr:nth-of-type(even){
     background-color: rgb(50, 51, 56);
 }
 
 .content-table tbody tr:last-of-type{
     border-bottom: 2px solid #5c5edc;
-}
-
-/*SearchBar styling*/
-.main-search{
-    position: relative;
-}
-
-input{
-    background-color: rgb(42, 43, 48);
-    color: white;
-    border: 3px solid #ffffff;
-    height: 40px;
-    width: 300px;
-    border-radius: 50px;
-    padding: 0px 10px;
-}
-
-li{
-    margin: 0 1.8em;
 }
