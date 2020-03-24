@@ -124,6 +124,7 @@ body {
 
 /*SearchBar styling*/
 .main-search{
+    right: -2.5%;
     position: relative;
 }
 
