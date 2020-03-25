@@ -8,7 +8,7 @@
     <meta name="description" content="Shonen Force RPG" />
 	<meta name="keywords" content="Shonen Force RPG" />
     <meta name="author" content="Victory Fatoyinbo" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/menu.css" />
     <script src="js/main.js"></script>
@@ -56,7 +56,7 @@
                 <p>A skill can be wasted, which means, if the move is used in a wrong situation, the move is counted but will have no effect in the battle.</p><br>
                 <p>To use a skill against a player, just type the skill name.</p><br>
                 <p>A move can be sold for half the XPs it is worth.</p><br>
-                <h3>Saiyan Skills</h3><br>
+                <h2>Saiyan Skills</h2><br>
                 <p><b>Punch </b>&amp; <b>Kick </b>are the first skills owned by a saiyan, These take 3hp, They cannot be sold and they require no cp to use.</p><br>
         
                 <div class="main-search">
@@ -137,11 +137,86 @@
                         <li class="saiyan"><b>Advanced Ki Shield(def): </b>Make a shield with a health of 8. Your life cannot be harmed by opponent until this shield is destroyed. 4cp to use. 23xp to buy.</li><br>
                         <li class="saiyan"><b>Spirit Bomb(atk): </b>Give opponent 4 damage. 1cp to use. 18xp to buy.</li><br>
                         <li class="saiyan"><b>Super Spirit Bomb(atk): </b>Give opponent 6 damage, this skill cannot be neglected, can only be used when your health is 5 and below. 5cp to use. 28xp to buy.</li><br>
-                        <li class="saiyan"><b>Chakra Fruit(gain): </b>You gain 5cp, you still play. 16xp to buy.</li><br>
-                    </ol>
+                        <li class="saiyan"><b>Ki Boost(gain): </b>You gain 5cp, you still play. 16xp to buy.</li><br>
+                    </ol> 
+                </div>
+
+                <h2>Ninja Skills</h2><br>
+                <p><b>Punch </b>&amp; <b>Kick </b>are the first skills owned by a ninja, These take 2hp, They cannot be sold and they require no cp to use.</p><br>
+                <div class="main-search">
+                    <input id="searchbar2" onkeyup="search_ninja()" type="text" name="search" placeholder="Search Ninja Skills...">
+                    <ol id="list">
+                        <br><li class="ninja"><b>Kunai(def): </b>Nullifies opponent's next move of immediate next turn. 2cp to use. 10xp to buy.</li><br>
+                        <li class="ninja"><b>Rasengan(atk): </b>-2 from opponent's life. 0cp to use. 5xp to buy.</li><br>
+                        <li class="ninja"><b>Chidori(atk): </b>-3 from opponent's life. 1cp to use. 10xp to buy.</li><br>
+                        <li class="ninja"><b>Sealing(time): </b>Seals one of opponent's move which can no longer be used in that battle until opponent's life is 5 or below. 2cp to use. 12xp to buy.</li><br>
+                        <li class="ninja"><b>Slug Wall(def): </b>This divides any damage of any opponent attack which uses cp by 2. This lasts till the opponent's 5th turn after activation. 3cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Ritual(nom): </b>This allows its user to switch one of their unused move with one of opponent's unused move. The name of the skills should not be said, but instead the letter of the skills on the players card, you still play. 3cp to use. 14xp to buy.</li><br>
+                        <li class="ninja"><b>Voodoo(time): </b>When your opponent gives you damage, he/she also takes the same damage at the end of the turn. This effect lasts till the end of the battle after it is used. This effect cannot occur when you die, cannot redirect damage that is more than 5. 6cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Shinra Tensei(neg): </b>Strike out of opponent's move. You use the letter of the skill in the player's card. If a skill which has been used is called, this has no effect. 3cp to use. 11xp to buy.</li><br>
+                        <li class="ninja"><b>Renin Gakido(neg): </b>This skill removes all damage done to you in the last turn & gives opponent the same damage, max damage is 11. 5cp to use. 20xp to buy.</li><br>
+                        <li class="ninja"><b>Occular(def): </b>This removes all damage done to you in previous turn, max is 8. 3cp to use. 12xp to buy.</li><br>
+                        <li class="ninja"><b>Incomplete Inzanami(time): </b>User commands opponent to use up to 2 moves on himself. If attack skills are commanded, the cp of the skills used must not excede 5 and max damage opponent recieves is 8. If move chosen cannot be used it is striked out. <b>Can only be used by a sharingan KKG character</b>, After use you cannot play in your next turn. 6cp to use. 24xp to buy.</li><br>
+                        <li class="ninja"><b>Incomplete Inzanagi(time): </b>This move restarts the battle, can only be used when your health is an odd number(1, 3 & 5 only). Can only be used once per battle. After 5 of your end turns and the battle is not over, you automatically lose the battle. Skills used before cannot be used by user or opponent. <b>Can only be used by a sharingan KKG character</b>. 5cp to use. 29xp to buy.</li><br>
+                        <li class="ninja"><b>Curse Seal(nom): </b>This is not regarded as an attacking skill, opp must use one of his atk skills against himself/herself. If(and only if) opponent does not have any atk skill or insufficient cp to perform the move, he/she must skip. 17xp to buy.</li><br>
+                        <li class="ninja"><b>Chakra Draining Jutsu(time/gain): </b>Take one cp from opponent and add it to yours, occurs at every one of your end turns after activation. This effect ends when opponent's cp is finished. 4cp to activate. 14xp to buy.</li><br>
+                        <li class="ninja"><b>Double Rashumon Wall(def): </b>Blocks 2 opponent attacks, can last for up to 3 turns. 4cp to use. 15xp to buy.</li><br>
+                        <li class="ninja"><b>Kamui(atk/gain): </b>If used as an atk, -3 from opponent's life, if used as gain, +4hp to user. 2cp to use. 12xp to buy.</li><br>
+                        <li class="ninja"><b>Amaterastu(atk/time): </b>Opponent loses 1hp every of their end turn, this effect cannot be neglected or nulified. 4cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Tribute(nom): </b>When the user's life is at 1, force one other player to commit suicide, can only work when the opponent's hp health is 10 & below. 5cp to use. 28xp to buy.</li><br>
+                        <li class="ninja"><b>The Mole(nom): </b>Switch your health with that of your opponrent, cannot switch health that is more than 11. 5cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Equilibrium(nom): </b>User's health must become equal to that of their opponent, cannot be used on health that is more than 20. 5cp to use. 19xp to buy.</li><br>
+                        <li class="ninja"><b>Cannengan(nom): </b>This move switches your cp with that of your opponent, cannot switch cp that is more than 12. 15xp to buy</li><br>
+                        <li class="ninja"><b>Gedo Art(time): </b>This move seals opponent's beast until their health reaches 5 or below. 5cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Shadow Paralyzing Jutsu(time): </b>Force opponent to skip 2 turns or pay 5cp. 3cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Chakra Fruit(gain): </b>You gain 5cp, you still play. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Shadow Clone Jutsu(nom): </b>Make 2 clones of yourself, the clones have 1hp each and they have all your skills including the ones you have used(except this one) but not your KKG. The clones still make use of your cp. Opponent cannot attack you until your clones are destroyed. The clones are automatically destroyed when your health reaches 3 and below. 4cp to activate. 23xp to buy.</li><br> 
+                        <li class="ninja"><b>Multi Shadow Clone Jutsu(nom): </b>Make 4 clones of yourself, the clones have 1hp each and they have all your skills including the ones you have used(except this one) but not your KKG. The clones still make use of your cp. Opponent cannot attack you until your clones are destroyed. The clones are automatically destroyed when your health reaches 3 and below. 7cp to activate. 23xp to buy.</li><br>
+                        <li class="ninja"><b>Renzenko Shite(neg): </b>This skill affects all players that have justus that last more than one turn, destroy the justsu & give all players affected by this 4hp damage. 5cp to use. 22xp to buy.</li><br>
+                        <li class="ninja"><b>Tailnigan(neg): </b>Can be used anytime a justu that reflects or neglects damage is used, neglect that justu(if it can be nelgected) and double the damage. 3cp to use. 22xp to buy.</li><br>
+                        <li class="ninja"><b>Limit Blocker(neg/time): </b>Seal a mode or a beast in the field, opponent cannot use the mode until after 5 of opponent's end turns after activation of this skill. 4cp to use 25xp to buy.</li><br>
+                        <li class="ninja"><b>Auto Defence Jutsu(def): </b>This justu automatically stops your teamate from taking damage below 5 by an attacking skill, can be used in opponent's turn. 2cp to use. 17xp to buy.</li><br>
+                        <li class="ninja"><b>Chakra Counter Jutsu(neg): </b>Can be used in opponent's turn. When you are about to take damage from a skill that uses cp, your opponent takes the damage instead but your opponent plays next(can only take effect if the skill to be blocked can be neglected). Max damage is 10. 4cp to use. 23xp to buy.</li><br>
+                        <li class="ninja"><b>Pain Day(time): </b>Multiply all damage caused by your attacking skills by 2. You die after 4 of your end turns after activation as long as this skill is still active. 4cp to use. 17xp to buy.</li><br>
+                        <li class="ninja"><b>Eternal Link Ninjutsu(gain/time): </b>All allies, including clones, in the battle recieve the same amount of cp you recieve, but both you and your allies take damage together as well. 3cp to activate. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Body Switching Jutsu(nom): </b>Switch your card, health & cp with that of your opponent. This lasts for 3 of your opponent's end turns. Can only be used if you recieve damage in your previous turn and if your opponent's hp is lower than 11. 5cp to use. 20xp to buy.</li><br>
+                        <li class="ninja"><b>Eternal Sealing Jutsu(time): </b>Seal two of opponent's moves which cannot be used until opponent's health reaches half of what it was when this skill was used, KKGs can also be sealed. 4cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Rasengan Barrage(atk): </b>When you have clones in the field, give your opponent damage for each clone you have, your clones cannot use attacking skills the turn this skill was used. You must be the one to play this move and not any of your clones. 4cp to use. 14xp to buy.</li><br>
+                        <li class="ninja"><b>Rasen Shuriken(atk): </b>When you have a clone(s) in the field and no damage in the last turn, give opponent 7 damage. 4cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Ligtning Style, Purple Lighting(atk): </b>Give opponent 5 damage. This skill cannot be neglected. 3cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Vanishing Rasengan(atk): </b>Give 4 damage to opponent in the beginning of their 2nd turn after activation. 2cp to use. 12xp to buy.</li><br>
+                        <li class="ninja"><b>Ultimate Punch(atk): </b>Give opponent 4 damage, this can be used twice in a battle. 3cp to use. 15xp to buy.</li><br>
+                        <li class="ninja"><b>Mystical Palm Technique(gain): </b>Give 3hp to all allies in the field and give yourself 5hp. 6cp to use. 20xp to buy.</li><br>
+                        <li class="ninja"><b>Seal Breaker(neg): </b>Destroy a time skill and give the user 3hp damage. 4cp to use. 19xp to buy.</li><br>
+                        <li class="ninja"><b>Fire Style, Fireball Jutsu(atk): </b>Give opponent 3 damage. 1cp to use. 10xp to buy</li><br>
+                        <li class="ninja"><b>Substitution(neg): </b>When you are about to recieve damage that is 4 or below, pay 2cp to neglect the damage. Can be used 2 times in a battle and can also be used in opponent's turn. 25xp to buy.</li><br>
+                        <li class="ninja"><b>Wood Spear(atk): </b>Give 3hp damage to two opponents. 2cp to use. 15xp to buy.</li><br>
+                        <li class="ninja"><b>Fire Barrier(def): </b>Reflect all damage done to you in your last turn to the users of the skills that gave you the damage. Max damage return is 10. 5cp to use. 27xp to buy.</li><br>
+                        <li class="ninja"><b>Last Moment(gain): </b>Add 5cp to user, can be used when your hp is 3 or below, you still play. 0cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Red Blood Sacrifice(time): </b>Everyone(including you) loses 2hp every of your end turn. 3cp to activate. 17xp to buy.</li><br>
+                        <li class="ninja"><b>Blue Chakra Sacrifice(time): </b>Everyone(including you) loses 2cp every of your end turn. 2cp to activate. 15xp to buy.</li><br>
+                        <li class="ninja"><b>Sacrificial Clone Ultimate Technique(time): </b>This skill can only be used if your health and chakra is 5 or below and when you have used both Red Blood Sacrifice & Blue Chakra Sacrifice. Spawn a clone, opponent cannot attack you as long as the clone is present. The clone cannot be destroyed by damage, neither can it use skills. The clone automatically destroys after 3 of your end turns and all damage done to you since the start of the battle is done to opponent. If your opponent does not die by this you die automatically. 3cp to use. 28xp to buy.</li><br>
+                        <li class="ninja"><b>Particle Demolition(atk): </b>Give opponent 6 damage if their health is an odd number, if opponent's health is an even number, give opponent 4 damage. 3cp to use. 27xp to buy.</li><br>
+                        <li class="ninja"><b>The Ruler(neg): </b>The damage your opponent does to you is divided equally into health and cp for you, you still take damage, can be used in opponent's turn. 3cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Revolution(neg): </b>Neglect a neglect skill, can be used anytime. 4cp to use 16xp to buy.</li><br>
+                        <li class="ninja"><b>FLowing Water Fist(gain/time): </b>All your physical attacks are buffed with an additional 2 damage. They can be used in every of your turn even if you have used them before, lasts for 3 of your end turns. 5cp to activate. 18xp to buy.</li><br>
+                        <li class="ninja"><b>One For All(gain): </b>You and one of your partners fuse 2 of your seperate moves together for 1 attack(must be attack skills). If this does not kill at least one of your opponents you and your partner lose the battle. 3cp to use. 16xp to buy.</li><br>
+                        <li class="ninja"><b>Hokage's Pride(gain): </b>You can borrow one skill from your hokages skill set. 3cp to use. 15xp to buy.</li><br>
+                        <li class="ninja"><b>Fly(nom): </b>This skill makes you fly. Opponent cannot give you damage for 3 of your turns, but skills that give 7 or more damage can destroy this skill. 4cp to activate. 24xp to buy.</li><br>
+                        <li class="ninja"><b>Disintegrating Circle(time): </b>Opponent cannot use any neglect or defensive skill for 4 turns. 4cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Daichi Tenyo(atk): </b>Destroy a defensive skill and give opponent 4 damage. 3cp to use. 18xp to buy.</li><br>
+                        <li class="ninja"><b>Mirror Gate(def): </b>Block either opponents previous or next skill used. 3cp to use. 15xp to buy.</li><br>
+                        <li class="ninja"><b>Air-Sand Wall(def): </b>Defend against an attack of 4 and below, can be used in opponent's turn. 2cp to use. 12xp to buy.</li><br>
+                        <li class="ninja"><b>Apinermal(atk): </b>Give opponent 7 damage, if opponent does not die after you use this, you lose the battle. 5cp to use. 26xp to buy.</li><br>
+                        <li class="ninja"><b>Azure Stream(gain): </b>All your attacks are buffed by 1 for 5 of your turns. 3cp to activate. 12xp to buy.</li><br>
+                        <li class="ninja"><b>Toad Gourd Prison(def): </b>Puts opponent in a cage the he/she must use 3cp to escape. 2cp to use. 13xp to buy.</li><br>
+                        <li class="ninja"><b>Eye Of The Butterfly(atk): </b>Gain 3hp and give opponent 3 damage. 4cp to use. 17xp to buy.</li><br>
+                        <li class="ninja"><b>Chibaku Tensei(atk): </b>Give opponent 3 damage. 0cp to use. 10xp to buy.</li><br>
+                     </ol>
+
                 </div>
                 <footer align="center">© Copyright 2020 Shonen Force, ØT Holdings - All Rights Reserved</footer><br>
-            </div><br>
+            </div>
     </header>
 
 </body>
