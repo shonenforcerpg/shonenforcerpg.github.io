@@ -44,3 +44,18 @@ function search_wizard() {
         }
     }
 }
+
+function search_quirk() {
+    let input = document.getElementById("searchbar4") .value 
+    input=input.toLowerCase();
+    let y=document.getElementsByClassName("quirk");
+
+    for (i=0; i<y.length; i++){
+        if(!y[i].innerHTML.toLowerCase().includes(input)){
+            y[i].style.display="none";
+        }
+        else{
+            y[i].style.display="list-item";
+        }
+    }
+}
