@@ -134,9 +134,10 @@ a{
 }
 
 input{
-    background-color: rgb(42, 43, 48);
-    color: white;
-    border: 3px solid #ffffff;
+    font-family: 'Sen', sans-serif;
+    background-color: #ffffff;
+    color: rgb(42, 43, 48);
+    border: 2px #5c5edc;
     height: 40px;
     width: 100%;
     border-radius: 50px;
