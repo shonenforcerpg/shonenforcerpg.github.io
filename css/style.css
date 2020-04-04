@@ -105,12 +105,13 @@ a{
     border-radius: 15px 15px 0 0;
     overflow: hidden;
     box-shadow:0 0 20px rgba(255, 255, 255, 0.25);
+    text-align: center;
 }
 
 .content-table thead tr{
     background-color: #5c5edc;
     color: white;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
